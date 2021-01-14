@@ -38,7 +38,7 @@ This requires approximately 44GB of disk space.
 ### The latest version dataset (recommended)
 To create the latest version (1.1 as of 2021/1/13) of TEDxJP-10K, execute the following command: 
 ```
-python3 compose_tedxjp10k.py tmp/raw
+python3 compose_tedxjp10k.py temp/raw
 ```
 
 By default, resultant TEDxJP-10K corpus will be created in `TEDxJP-10K_v1.1` folder.
@@ -49,7 +49,7 @@ Please note that all the wav files will be convereted to 16kHz sampling and copi
 ### Old versions
 To create the old version dataset (for the purpose of reproducing the experiments of our paper), `--version 1.0` command line option should be added:
 ```
-python3 compose_tedxjp10k.py --version 1.0 tmp/raw
+python3 compose_tedxjp10k.py --version 1.0 temp/raw
 ```
 TEDxJP-10K corpus will be created in `TEDxJP-10K_v1.0` folder.
 

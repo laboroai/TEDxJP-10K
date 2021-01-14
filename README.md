@@ -8,6 +8,7 @@ In this repository, we release the scripts for reconstructing dataset as well as
 
 ## Prerequisite
 - sox
+- [youtube-dl](https://github.com/ytdl-org/youtube-dl)
 - Python 3.6+
 - jaconv>=0.2.4
 

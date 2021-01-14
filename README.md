@@ -36,7 +36,9 @@ This requires approximately 44GB of disk space.
 
 ### The latest version dataset (recommended)
 To create the latest version (1.1 as of 2021/1/13) of TEDxJP-10K, execute the following command: 
-```python3 compose_tedxjp10k.py tmp/raw```
+```
+python3 compose_tedxjp10k.py tmp/raw
+```
 
 By default, resultant TEDxJP-10K corpus will be created in `TEDxJP-10K_v1.1` folder.
 If you want to store the data to different place, please add `--dst_dir` option.
@@ -45,7 +47,9 @@ Please note that all the wav files will be convereted to 16kHz sampling and copi
 
 ### Old versions
 To create the old version dataset (for the purpose of reproducing the experiments of our paper), `--version 1.0` command line option should be added:
-```python3 compose_tedxjp10k.py --version 1.0 tmp/raw```
+```
+python3 compose_tedxjp10k.py --version 1.0 tmp/raw
+```
 TEDxJP-10K corpus will be created in `TEDxJP-10K_v1.0` folder.
 
 ## Content of TEDxJP-10K
@@ -56,7 +60,7 @@ Instead of `wav.scp`, we created `wavlist.txt` as below:
 -6K2nN9aWsg -6K2nN9aWsg.16k.wav
 0KTVqevvEjo 0KTVqevvEjo.16k.wav
 ```
-To use in Kaldi/ESPnet, you may want to convert `wavlist.txt` file to `wav.scp` file something like this:
+To use in Kaldi/ESPnet, you may want to convert `wavlist.txt` file to `wav.scp` file like this:
 ```
 -6K2nN9aWsg sox "/path/to/TEDxJP-10K/wav/-6K2nN9aWsg.16k.wav" -c 1 -r 16000 -t wav - |
 0KTVqevvEjo sox "/path/to/TEDxJP-10K/wav/0KTVqevvEjo.16k.wav" -c 1 -r 16000 -t wav - |
